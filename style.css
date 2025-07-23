@@ -5,6 +5,45 @@ body {
   color: #fff;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
+
+body.light {
+  background: radial-gradient(circle at 65% 10%, #eaf6fb, #c7e6f7 80%);
+  color: #222;
+}
+
+body.light header {
+  background: linear-gradient(120deg, #b2eaff 20%, #eaf6fb 74%);
+}
+
+body.light section {
+  background: rgba(255,255,255,0.94);
+  color: #222;
+}
+
+body.light nav a, body.light #theme-toggle {
+  background: rgba(61, 218, 215, 0.13);
+  border: 1.5px solid #0ff7;
+  color: #181937;
+}
+
+body.light nav a:hover, body.light #theme-toggle:hover {
+  background: #0ff9;
+  color: #fff;
+}
+
+body.light .card3d {
+  background: linear-gradient(120deg, #eaf6fb 0%, #b2eaff 70%);
+  color: #181937;
+}
+
+body.light .footer-lock {
+  filter: drop-shadow(0 0 19px #0ff5);
+}
+
+body.light footer {
+  background: linear-gradient(90deg, #eaf6fb 20%, #b2eaff 70%);
+  color: #181937;
+}
 header {
   text-align: center;
   padding: 2.5em 1.2em 1.2em;
