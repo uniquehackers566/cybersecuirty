@@ -246,13 +246,7 @@ header p {
     margin: 0.7em 0 0.5em;
   }
 }
-@media (max-width: 600px) {
-  .tools-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
-  }
-}
+/* Removed duplicate .tools-grid mobile override for max-width: 600px to avoid stacking issues */
 @media (max-width: 700px) {
   .tools-grid {
     display: grid;
