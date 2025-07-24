@@ -599,8 +599,8 @@ footer {
 }
 @media (max-width: 700px) {
   .tools-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
     gap: 1.1rem;
   }
   nav {gap: .7em;}
