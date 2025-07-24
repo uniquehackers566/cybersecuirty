@@ -246,6 +246,20 @@ header p {
     margin: 0.7em 0 0.5em;
   }
 }
+@media (max-width: 600px) {
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+@media (max-width: 700px) {
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
 @media (min-width: 601px) {
   .tools-grid {
     gap: 1.1rem;
