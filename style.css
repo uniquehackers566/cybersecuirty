@@ -657,3 +657,27 @@ nav a:focus, #theme-toggle:focus, .quiz-options button:focus, .tool-toggle:focus
   margin-left: 0.7em;
   color: #fff;
 }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: #0ffad6;
+  color: #143871;
+  padding: 0.7em 1.2em;
+  border-radius: 1.2em;
+  font-weight: bold;
+  transition: left 0.2s;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  outline: 2px solid #0ffad6;
+  box-shadow: 0 0 0 3px #0ffad655;
+}

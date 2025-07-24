@@ -13,10 +13,11 @@
       <a href="index.html">Home</a>
       <a href="threats.html">Threats</a>
       <a href="protection.html">Protection</a>
+      <a href="tools.html">Tools</a>
       <a href="quiz.html">Quiz</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
-      <a href="tools.html">Tools</a>
+      <button id="theme-toggle">Light Mode</button>
     </nav>
   </header>
   <section class="tools-section">
@@ -151,6 +152,20 @@
     </div>
     <p>These tools are widely used by cybersecurity professionals for network analysis, penetration testing, vulnerability assessment, and digital forensics.</p>
   </section>
+  <section class="glossary-section" aria-labelledby="glossary-title">
+    <h2 id="glossary-title">Cybersecurity Glossary</h2>
+    <ul class="faq-list">
+      <li><span class="faq-q">Antivirus</span><span class="faq-a">Software that detects and removes malicious software from computers and networks.</span></li>
+      <li><span class="faq-q">Botnet</span><span class="faq-a">A network of infected computers controlled by a hacker to perform attacks.</span></li>
+      <li><span class="faq-q">Encryption</span><span class="faq-a">The process of converting data into a coded form to prevent unauthorized access.</span></li>
+      <li><span class="faq-q">Firewall</span><span class="faq-a">A security system that monitors and controls incoming and outgoing network traffic.</span></li>
+      <li><span class="faq-q">Malware</span><span class="faq-a">Malicious software designed to harm, exploit, or otherwise compromise a device or network.</span></li>
+      <li><span class="faq-q">Phishing</span><span class="faq-a">A cyberattack that uses disguised emails or websites to trick people into revealing sensitive information.</span></li>
+      <li><span class="faq-q">Ransomware</span><span class="faq-a">Malware that locks or encrypts your files and demands payment for their release.</span></li>
+      <li><span class="faq-q">Social Engineering</span><span class="faq-a">Manipulating people into giving up confidential information.</span></li>
+      <li><span class="faq-q">VPN</span><span class="faq-a">A Virtual Private Network that encrypts your internet connection for privacy and security.</span></li>
+    </ul>
+  </section>
   <script>
     function toggleToolDetail(btn) {
       const detail = btn.nextElementSibling;
@@ -162,6 +177,7 @@
         btn.innerText = "Show Details";
       }
     }
+    // Theme toggle is now handled globally by script.js for consistency
   </script>
   <footer>
     <div>
