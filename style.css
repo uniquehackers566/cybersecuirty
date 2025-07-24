@@ -15,6 +15,15 @@
   margin: 0 auto;
   max-width: 1200px;
 }
+@media (max-width: 700px) {
+  .tools-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.1rem;
+  }
+  .tool-card {
+    min-width: 0 !important;
+  }
+}
 .tool-card {
   background: #18222e;
   border-radius: 18px;
