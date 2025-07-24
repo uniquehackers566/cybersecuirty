@@ -590,9 +590,11 @@ footer {
   filter: drop-shadow(0 0 19px #0ff5);
 }
 @media (max-width: 700px) {
-  section {border-radius: 1em; padding: 1.2em .6em;}
-  .container-3d {flex-direction: column;}
-  .cards-3d {flex-direction: column;}
+  .tools-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
   nav {gap: .7em;}
   .spline-3d-widget {width: 98vw; min-width: 180px;}
 }
