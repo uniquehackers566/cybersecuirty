@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools Used in Cybersecurity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tools Used in Cybersecurity</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="threats.html">Threats</a>
+      <a href="protection.html">Protection</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </header>
+  <section class="tools-section">
+    <h2>Popular Cybersecurity Tools</h2>
+    <div class="tools-grid">
+      <!-- Tool Card: Nmap -->
+      <div class="tool-card">
+        <img src="https://nmap.org/images/nmap-logo-256x256.png" alt="Nmap Logo" class="tool-img" />
+        <h3>Nmap</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Network scanning and discovery tool used to map networks and identify open ports and services.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Wireshark -->
+      <div class="tool-card">
+        <img src="https://www.wireshark.org/assets/images/ws-logo.png" alt="Wireshark Logo" class="tool-img" />
+        <h3>Wireshark</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Network protocol analyzer for capturing and inspecting packets in real time.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Metasploit -->
+      <div class="tool-card">
+        <img src="https://avatars.githubusercontent.com/u/1685866?s=200&v=4" alt="Metasploit Logo" class="tool-img" />
+        <h3>Metasploit</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Penetration testing framework for developing and executing exploit code against remote targets.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Burp Suite -->
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Burp_Suite_Logo.png" alt="Burp Suite Logo" class="tool-img" />
+        <h3>Burp Suite</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Web vulnerability scanner and proxy for testing web application security.</p>
+        </div>
+      </div>
+      <!-- Tool Card: John the Ripper -->
+      <div class="tool-card">
+        <img src="https://www.openwall.com/images/john-logo.png" alt="John the Ripper Logo" class="tool-img" />
+        <h3>John the Ripper</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Password cracking tool for testing password strength and recovering lost passwords.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Aircrack-ng -->
+      <div class="tool-card">
+        <img src="https://www.aircrack-ng.org/images/logo.png" alt="Aircrack-ng Logo" class="tool-img" />
+        <h3>Aircrack-ng</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Suite of tools for assessing Wi-Fi network security and cracking WEP/WPA keys.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Kali Linux -->
+      <div class="tool-card">
+        <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux Logo" class="tool-img" />
+        <h3>Kali Linux</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Security-focused Linux distribution packed with penetration testing and forensic tools.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Snort -->
+      <div class="tool-card">
+        <img src="https://www.snort.org/themes/snort/img/snort-logo.png" alt="Snort Logo" class="tool-img" />
+        <h3>Snort</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Intrusion detection and prevention system for monitoring network traffic.</p>
+        </div>
+      </div>
+      <!-- Tool Card: OpenVAS -->
+      <div class="tool-card">
+        <img src="https://avatars.githubusercontent.com/u/3891672?s=200&v=4" alt="OpenVAS Logo" class="tool-img" />
+        <h3>OpenVAS</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Comprehensive vulnerability scanner for identifying security issues in systems.</p>
+        </div>
+      </div>
+      <!-- Tool Card: OSSEC -->
+      <div class="tool-card">
+        <img src="https://avatars.githubusercontent.com/u/1196036?s=200&v=4" alt="OSSEC Logo" class="tool-img" />
+        <h3>OSSEC</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Host-based intrusion detection system for monitoring and analyzing system activity.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Hashcat -->
+      <div class="tool-card">
+        <img src="https://hashcat.net/hashcat/hashcat.png" alt="Hashcat Logo" class="tool-img" />
+        <h3>Hashcat</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Advanced password recovery tool supporting many hashing algorithms.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Autopsy -->
+      <div class="tool-card">
+        <img src="https://avatars.githubusercontent.com/u/1813442?s=200&v=4" alt="Autopsy Logo" class="tool-img" />
+        <h3>Autopsy</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Digital forensics platform for analyzing hard drives and smartphones.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Netcat -->
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Netcat_logo.png" alt="Netcat Logo" class="tool-img" />
+        <h3>Netcat</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Network utility for reading and writing data across network connections.</p>
+        </div>
+      </div>
+      <!-- Tool Card: Splunk -->
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Splunk_logo.svg" alt="Splunk Logo" class="tool-img" />
+        <h3>Splunk</h3>
+        <button class="tool-toggle" onclick="toggleToolDetail(this)">Show Details</button>
+        <div class="tool-detail" style="display:none;">
+          <p>Security information and event management (SIEM) platform for analyzing machine data.</p>
+        </div>
+      </div>
+    </div>
+    <p>These tools are widely used by cybersecurity professionals for network analysis, penetration testing, vulnerability assessment, and digital forensics.</p>
+  </section>
+  <script>
+    function toggleToolDetail(btn) {
+      const detail = btn.nextElementSibling;
+      if (detail.style.display === "none") {
+        detail.style.display = "block";
+        btn.innerText = "Hide Details";
+      } else {
+        detail.style.display = "none";
+        btn.innerText = "Show Details";
+      }
+    }
+  </script>
+  <footer>
+    <div>
+      <strong>Project by: Kushagra and Lucky</strong><br>
+      <span>Stay Smart. Stay Safe. Stay Cyber-Protected.<br>&copy; 2025</span>
+    </div>
+  </footer>
+</body>
+</html>
