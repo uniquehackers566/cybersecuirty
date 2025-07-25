@@ -25,6 +25,18 @@
       <a href="contact.html">Contact</a>
       <button id="theme-toggle">Light Mode</button>
     </nav>
+    <nav class="nav-menu">
+      <button id="menu-toggle" aria-label="Open navigation menu" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+      <div class="menu-dropdown" id="menu-dropdown" style="display:none;">
+        <a href="index.html">Home</a>
+        <a href="protection.html">Protection</a>
+        <a href="threats.html">Threats</a>
+        <a href="tools.html">Tools</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <section>
@@ -52,5 +64,20 @@
       <span>Stay Smart. Stay Safe. Stay Cyber-Protected.<br>&copy; 2025</span>
     </div>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuDropdown = document.getElementById('menu-dropdown');
+    menuToggle.addEventListener('click', function() {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuDropdown.style.display = expanded ? 'none' : 'flex';
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+    document.addEventListener('click', function(e) {
+      if (!menuDropdown.contains(e.target) && e.target !== menuToggle) {
+        menuDropdown.style.display = 'none';
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
 </body>
 </html>

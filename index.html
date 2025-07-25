@@ -17,22 +17,30 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
+  <nav class="theme-nav" style="position:absolute;top:1.2em;left:2em;z-index:2001;">
+    <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-switch">
+      <span class="theme-slider"></span>
+      <span class="theme-icon" id="theme-icon">🌙</span>
+    </button>
+  </nav>
+  <header style="position:relative;">
     <div class="spline-3d-widget">
       <img id="splineImg" src="https://t4.ftcdn.net/jpg/04/72/18/19/360_F_472181971_ZCXWPAgsA2Yp6kEUhkSQDLvLvGuLhZxW.jpg" style="display:block;margin:0 auto;max-width:100%;max-height:220px;aspect-ratio:1.2/1;object-fit:cover;border-radius:32px;box-shadow:0 7px 65px #0efffaaf,0 5px 12px #1fcacd61;background:#12171b;" loading="lazy" />
     </div>
+    <nav class="nav-menu" style="position:absolute;top:1.2em;right:2em;z-index:1001;">
+      <button id="menu-toggle" aria-label="Open navigation menu" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+      <div class="menu-dropdown" id="menu-dropdown" style="display:none;right:0;left:auto;">
+        <a href="index.html">Home</a>
+        <a href="protection.html">Protection</a>
+        <a href="threats.html">Threats</a>
+        <a href="tools.html">Tools</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
     <h1>Cybersecurity: Protect Your Digital World</h1>
     <p>Discover what cybersecurity is, common threats, and how to stay safe online.<br><span style="color:#15e1fa;">Level up your cyber awareness!</span></p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="threats.html">Threats</a>
-      <a href="protection.html">Protection</a>
-      <a href="tools.html">Tools</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <button id="theme-toggle">Light Mode</button>
-    </nav>
   </header>
 
   <section id="main-content">
@@ -83,5 +91,56 @@
       <span>Stay Smart. Stay Safe. Stay Cyber-Protected.<br>&copy; 2025</span>
     </div>
   </footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuDropdown = document.getElementById('menu-dropdown');
+  menuToggle.addEventListener('click', function() {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuDropdown.style.display = expanded ? 'none' : 'flex';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    if (!expanded) {
+      menuDropdown.querySelector('a').focus();
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (!menuDropdown.contains(e.target) && e.target !== menuToggle) {
+      menuDropdown.style.display = 'none';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  menuDropdown.addEventListener('keydown', function(e) {
+    const links = Array.from(menuDropdown.querySelectorAll('a'));
+    const first = links[0];
+    const last = links[links.length - 1];
+    if (e.key === 'Escape') {
+      menuDropdown.style.display = 'none';
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    } else if (e.key === 'Tab') {
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  // Theme toggle logic
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  themeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('light');
+    themeToggle.classList.toggle('active');
+    if(document.body.classList.contains('light')) {
+      themeIcon.textContent = '☀️';
+    } else {
+      themeIcon.textContent = '🌙';
+    }
+  });
+});
+</script>
 </body>
 </html>
